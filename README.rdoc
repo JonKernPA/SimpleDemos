@@ -1,0 +1,3 @@
+= Simple Demos
+
+This is just a collection of assorted examples that I put together, typically in response to a mailing list query, or for my own curiosity.

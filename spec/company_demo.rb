@@ -12,7 +12,6 @@ db = cnx.db("demo")
 
 unless db.nil?
   db.collection_names.each do |name|
-    #puts "\t" << coll << "(" << (Kernel.const_get(coll.capitalize.chop).send("count")) << ")"
     coll = db.collection(name)
     puts "\t #{name} (#{coll.count()})"
   end
@@ -47,7 +46,6 @@ puts '*'*50
 puts c1.to_s_full
 
 puts '*'*50
-c1 = Company.find_by_name("Greatest Company Ever")
 
 puts "\n\nCompany: " + c1.to_json 
 c1.jobs.each_with_index {|j,i| puts "   #{i+1}: #{j.to_json}"}
@@ -55,6 +53,9 @@ c1.jobs.each_with_index {|j,i| puts "   #{i+1}: #{j.to_json}"}
 job_to_delete = c1.jobs[0]
 puts "\nNow lets delete the first job: '#{job_to_delete.description}'"
 c1.remove_job(job_to_delete)
+j1.destroy
+c1.save!
+c1 = Company.find_by_name("Greatest Company Ever")
 
 puts "\n\nAfter Delete: " + c1.to_json 
 c1.jobs.each_with_index {|j,i| puts "   #{i+1}: #{j.to_json}"}

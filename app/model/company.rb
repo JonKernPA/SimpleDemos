@@ -30,7 +30,7 @@ class Company
      # j = Job.find(job.id)
      # puts "deleted job = #{j.inspect}"
      # Job.destroy(job.id)
-     # save!
+     save!
    end
 end
 

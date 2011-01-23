@@ -19,18 +19,25 @@ class Company
      text
    end
    
+   def to_jobs
+     jobs.each_with_index {|j,i| puts "   #{i+1}: #{j.description}"}
+   end
+   
+   def to_jobs_json
+     jobs.each_with_index {|j,i| puts "   #{i+1}: #{j.to_json}"}
+   end
+   
    def remove_job(job)
      puts "Removing job: #{job.description}"
-     Job.find(job.id).destroy
-     # jobs.delete(job.id)
-     # j = Job.find(job.id)
-     # puts "deleted job = #{j.inspect}"
-     # # job.destroy # Does not do anything
-     # Job.delete(job.id) # Does not do anything
-     # j = Job.find(job.id)
-     # puts "deleted job = #{j.inspect}"
-     # Job.destroy(job.id)
+     jobs.delete(job.id)
+     job.company = nil
      save!
+   end
+
+   def self.show_all
+     puts "\nALL COMPANIES:"
+     companies = Company.all
+     companies.each {|company| puts "\t#{company}"}
    end
 end
 

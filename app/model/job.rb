@@ -8,7 +8,13 @@ class Job
    belongs_to :company
    
    def to_s
-     "#{company}: #{description}"
+     "#{company.nil? ? 'n/a' : company}: #{description}"
+   end
+   
+   def self.show_all
+     puts "\nALL JOBS:"
+     jobs = Job.all
+     jobs.each {|job| puts "\t#{job}"}
    end
 end
 

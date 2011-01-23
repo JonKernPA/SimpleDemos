@@ -1,16 +1,14 @@
+Dropping: companies (1)
+Dropping: jobs (2)
+
 Creating company:
-	Company: {"name":"Greatest Company Ever","id":"4d3b76b58951a22a06000001"}
+	Company: {"name":"Greatest Company Ever","id":"4d3cbeab8951a2378d000001"}
 
 Creating job 1:
-	Job 1: {"company_id":"4d3b76b58951a22a06000001","description":"Agile Quarterback","id":"4d3b76b58951a22a06000002"}
+	Job 1: {"company_id":"4d3cbeab8951a2378d000001","description":"Agile Quarterback","id":"4d3cbeab8951a2378d000002"}
 
 Creating job 2:
-	Job 2: {"company_id":"4d3b76b58951a22a06000001","description":"MongoMapper Guru","id":"4d3b76b58951a22a06000003"}
-
-
-Company: {"name":"Greatest Company Ever","id":"4d3b76b58951a22a06000001"}
-   1: {"company_id":"4d3b76b58951a22a06000001","description":"Agile Quarterback","id":"4d3b76b58951a22a06000002"}
-   2: {"company_id":"4d3b76b58951a22a06000001","description":"MongoMapper Guru","id":"4d3b76b58951a22a06000003"}
+	Job 2: {"company_id":"4d3cbeab8951a2378d000001","description":"MongoMapper Guru","id":"4d3cbeab8951a2378d000003"}
 **************************************************
 
 Greatest Company Ever
@@ -20,15 +18,13 @@ Greatest Company Ever
 
 **************************************************
 
-
-Company: {"name":"Greatest Company Ever","id":"4d3b76b58951a22a06000001"}
-   1: {"company_id":"4d3b76b58951a22a06000001","description":"Agile Quarterback","id":"4d3b76b58951a22a06000002"}
-   2: {"company_id":"4d3b76b58951a22a06000001","description":"MongoMapper Guru","id":"4d3b76b58951a22a06000003"}
-
 Now lets delete the first job: 'Agile Quarterback'
 Removing job: Agile Quarterback
 
 
-After Delete: {"name":"Greatest Company Ever","id":"4d3b76b58951a22a06000001"}
-   1: {"company_id":"4d3b76b58951a22a06000001","description":"MongoMapper Guru","id":"4d3b76b58951a22a06000003"}
-   2: {"company_id":"4d3b76b58951a22a06000001","description":"Agile Quarterback","id":"4d3b76b58951a22a06000002"}
+After Delete: Greatest Company Ever
+   1: MongoMapper Guru
+
+ALL JOBS:
+	Greatest Company Ever: MongoMapper Guru
+	n/a: Agile Quarterback

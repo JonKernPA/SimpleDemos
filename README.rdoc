@@ -1,3 +1,15 @@
 = Simple Demos
 
 This is just a collection of assorted examples that I put together, typically in response to a mailing list query, or for my own curiosity.
+
+== Usage
+
+I tend to use TextMate... so I simply can go to one of the files under spec, for example:
+
+  spec/company_demo.rb
+
+And "run it" 
+
+You could also go to the command line and, from the root directory:
+  jonsmac2-2:ssimple_demo jon$ ruby spec/company_demo.rb
+	
